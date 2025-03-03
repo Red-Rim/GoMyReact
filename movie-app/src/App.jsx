@@ -36,13 +36,12 @@ const App = () => {
       trailerLink: 'https://www.youtube.com/embed/qEVUtrk8_B4',
     },
   ]);
-  
 
   const [titleFilter, setTitleFilter] = useState('');
   const [ratingFilter, setRatingFilter] = useState('');
 
   const addMovie = (movie) => {
-    setMovies((prevMovies) => [...prevMovies, movie]); //add the new movie to the list
+    setMovies((prevMovies) => [...prevMovies, movie]); //add new movie to list
   };
 
   const filteredMovies = movies.filter((movie) => {

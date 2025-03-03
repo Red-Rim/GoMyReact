@@ -6,7 +6,7 @@ const MovieDescription = ({ movies }) => {
   const movie = movies.find((movie) => movie.title === title);
 
   if (!movie) {
-    return <div>Movie not found</div>;
+    return <div className="text-white text-center text-2xl">Movie not found</div>;
   }
 
   return (
@@ -17,19 +17,17 @@ const MovieDescription = ({ movies }) => {
 
       <div className="mt-4">
         <h2 className="text-2xl font-semibold">Trailer</h2>
-            <iframe
-              width="100%"
-              height="500px"
-              src={movie.trailerLink}
-              title={movie.title}
-            
-              allowFullScreen
-              className="w-full h-[500px] md:h-[600px] lg:h-[700px]"
-            ></iframe>
-
+        <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
+          <iframe
+            src={movie.trailerLink}
+            title={movie.title}
+            className="absolute top-0 left-0 w-full h-full"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
 
-      <Link to="/" className="mt-4 text-blue-400 hover:text-blue-600">
+      <Link to="/" className="mt-4 text-blue-400 hover:text-blue-600 block">
         Back to Home
       </Link>
     </div>
