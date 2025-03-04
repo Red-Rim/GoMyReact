@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
-import "./App.css"; // Import the new CSS file
+import "./App.css";
 
+//app component
 const App = () => {
   const [tasks, setTasks] = useState([]);
 
@@ -29,6 +30,7 @@ const App = () => {
     }
   };
 
+  //returning the app container
   return (
     <div className="app-container">
       <h1 className="app-title">📝 To-Do List</h1>
