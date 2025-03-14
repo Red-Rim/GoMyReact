@@ -1,0 +1,1 @@
+# Vehicle Project - TypeScript setup and compilation
